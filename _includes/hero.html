@@ -1,0 +1,8 @@
+<section class="hero">
+  {% assign latest = site.static_files | where_exp:"f","f.path contains
+  '/assets/photos/latest'" | last %}
+  <img
+    src="{{ latest.path | default: '/assets/photos/_placeholder/hero.jpg' }}"
+    onclick="openLightbox(this.src)"
+  />
+</section>

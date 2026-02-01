@@ -1,0 +1,40 @@
+name: Import Photos from Issues
+
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  import:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download images
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue = context.payload.issue;
+            const labels = issue.labels.map(l => l.name);
+            const album = labels[0] || 'uncategorized';
+
+            const fs = require('fs');
+            const fetch = require('node-fetch');
+
+            fs.mkdirSync(`assets/photos/${album}`, { recursive: true });
+            fs.mkdirSync(`assets/photos/latest`, { recursive: true });
+
+            for (const a of issue.attachments || []) {
+              const res = await fetch(a.url);
+              const buffer = await res.buffer();
+              fs.writeFileSync(`assets/photos/${album}/${a.name}`, buffer);
+              fs.writeFileSync(`assets/photos/latest/${a.name}`, buffer);
+            }
+
+      - name: Commit changes
+        run: |
+          git config user.name "photo-bot"
+          git config user.email "actions@github.com"
+          git add .
+          git commit -m "Add photos from issue"
+          git push

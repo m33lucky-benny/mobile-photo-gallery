@@ -1,12 +1,12 @@
 # =========================
 # 🌐 SITE METADATA
 # =========================
-title: ConsultantDev
-description: "SEO-first websites with strict CSP, performance optimization, and technical consulting for Singapore businesses."
+title: Private Photo Gallery
+description: One-click mobile photo gallery
 image: "/assets/images/ebiya-logo.webp"
 
-url: "https://consultant.ebiya.sg"   # REQUIRED
-baseurl: ""                          # Leave empty (not a sub-repo)
+url: "https://consultant.ebiya.sg" # REQUIRED
+baseurl: "" # Leave empty (not a sub-repo)
 
 markdown: kramdown
 
@@ -16,33 +16,6 @@ markdown: kramdown
 sass:
   sass_dir: _sass
   style: compressed
-
-# =========================
-# 🏢 BUSINESS INFO (Schema + SEO)
-# =========================
-business:
-  name: "Ebiya.SG"
-  url: "https://consultant.ebiya.sg"
-  image: "/assets/images/ebiya-logo.webp"
-  telephone: "+65 8900 2228"
-  email: "bennyyuen@consultant.com"
-  priceRange: "$$$"
-
-  address:
-    streetAddress: "55 Changi Road #B1-01"
-    addressLocality: "Singapore"
-    addressRegion: "SG"
-    postalCode: "419709"
-    addressCountry: "SG"
-
-  areaServed: "Singapore"
-  openingHours:
-    days: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-    opens: "09:00"
-    closes: "18:00"
-
-  sameAs:
-    - "https://instagram.com/ebiyasg"
 
 # =========================
 # 🔌 PLUGINS (SAFE FOR GITHUB PAGES)
@@ -55,8 +28,8 @@ plugins:
 # 💬 WHATSAPP
 # =========================
 whatsapp:
-  enabled: true
-  phone: "6589002228"
+  enabled: false
+  phone: ""
 
 # =========================
 # 🚫 EXCLUDES

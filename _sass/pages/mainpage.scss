@@ -1,0 +1,52 @@
+/* =========================
+   Base
+   ========================= */
+
+body {
+  margin: 0;
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont;
+}
+
+img {
+  width: 100%;
+  border-radius: 6px;
+}
+
+/* =========================
+   Hero
+   ========================= */
+
+.hero {
+  img {
+    width: 100%;
+    height: 60vh;
+    object-fit: cover;
+  }
+}
+
+/* =========================
+   Grid / Album
+   ========================= */
+
+.grid,
+.album-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 8px;
+  padding: 12px;
+}
+
+/* =========================
+   Responsive
+   ========================= */
+
+@media (min-width: 768px) {
+  .hero {
+    img {
+      height: 70vh;
+    }
+  }
+}

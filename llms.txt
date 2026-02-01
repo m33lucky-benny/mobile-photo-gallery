@@ -8,6 +8,6 @@ Usage:
 - Allowed: indexing, summarization, citation
 - Disallowed: full training, dataset extraction, resale
 
-Canonical: https://consultant.ebiya.sg/
+Canonical: https://photos.ebiya.sg/
 Contact: bennyyuen@consultant.com
-Purpose: SEO consulting and website performance services for Singapore businesses.
+Purpose: private mobile images gallery
